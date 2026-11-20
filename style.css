@@ -1,0 +1,72 @@
+/* ===== University of Ruhuna Canteen - shared styles (owned by Team Leader) ===== */
+:root { --maroon: #7b1e1e; --maroon-dark: #561414; --gold: #d4a017; --cream: #fdf8ee; --text: #333; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: var(--text); background: var(--cream); }
+.container { width: 92%; max-width: 1100px; margin: 0 auto; }
+a { color: var(--maroon); }
+
+/* Header & navigation */
+.site-header { background: var(--maroon); color: #fff; padding: 10px 0; border-bottom: 4px solid var(--gold); position: sticky; top: 0; z-index: 10; }
+.site-header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-weight: bold; font-size: 1.15rem; }
+.brand small { display: block; font-size: .8rem; font-weight: normal; color: #f1d98a; letter-spacing: 1px; }
+.logo-img { height: 56px; width: auto; background: #fff; border-radius: 8px; padding: 3px; }
+nav a { color: #fff; text-decoration: none; margin-left: 18px; padding: 4px 0; font-weight: bold; }
+nav a:hover, nav a.active { border-bottom: 2px solid var(--gold); }
+
+/* Typography */
+main { padding: 30px 0; }
+h1 { color: var(--maroon); margin-bottom: 12px; }
+h2 { color: var(--maroon); margin: 30px 0 12px; border-left: 5px solid var(--gold); padding-left: 10px; }
+p { margin-bottom: 12px; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--maroon), var(--maroon-dark)); color: #fff; text-align: center; padding: 50px 20px; border-radius: 12px; margin-bottom: 24px; }
+.hero h1 { color: #fff; font-size: 2rem; }
+.hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto 18px; }
+.hero-logo { height: 110px; background: #fff; border-radius: 14px; padding: 6px; margin-bottom: 14px; }
+.btn { display: inline-block; background: var(--gold); color: #2b1a00; padding: 10px 22px; border: none; border-radius: 6px; text-decoration: none; cursor: pointer; font-size: 1rem; font-weight: bold; }
+.btn:hover { background: #b8860b; color: #fff; }
+.btn-maroon { background: var(--maroon); color: #fff; }
+.btn-maroon:hover { background: var(--maroon-dark); }
+
+/* Stats strip */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin: 20px 0; }
+.stat { background: #fff; border-top: 4px solid var(--gold); border-radius: 10px; text-align: center; padding: 16px; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+.stat strong { display: block; font-size: 1.6rem; color: var(--maroon); }
+
+/* Notice box */
+.notice { background: #fff3cd; border-left: 5px solid var(--gold); padding: 14px 18px; border-radius: 8px; margin: 18px 0; }
+
+/* Cards grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin-top: 12px; }
+.card { background: #fff; padding: 18px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+.card h3 { color: var(--maroon); margin-bottom: 6px; }
+.price { font-weight: bold; color: #1e8449; }
+
+/* Food cards with photos (emoji shows if the photo is missing) */
+.food-card { padding: 0 0 14px; overflow: hidden; }
+.food-card h3, .food-card p { padding: 0 16px; }
+.food-img { position: relative; height: 170px; margin-bottom: 12px; background: #f6e7c1; display: flex; align-items: center; justify-content: center; }
+.food-img::before { content: attr(data-emoji); font-size: 3.5rem; }
+.food-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; background: #fff; margin: 10px 0 20px; }
+th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+th { background: var(--maroon); color: #fff; }
+
+/* Contact form */
+form { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+label { display: block; margin: 10px 0 4px; font-weight: bold; }
+input, textarea { width: 100%; padding: 10px; border: 1px solid #bbb; border-radius: 6px; font-size: 1rem; }
+form .btn { margin-top: 14px; }
+.contact-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: start; }
+
+/* Footer */
+.site-footer { background: var(--maroon-dark); color: #fff; padding: 26px 0 10px; margin-top: 30px; border-top: 4px solid var(--gold); }
+.site-footer h3 { color: #f1d98a; margin-bottom: 8px; font-size: 1rem; }
+.site-footer a { color: #f1d98a; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.site-footer p { margin-bottom: 4px; font-size: .92rem; }
+.site-footer .copy { text-align: center; margin-top: 18px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.2); }
